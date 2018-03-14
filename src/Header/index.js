@@ -23,7 +23,6 @@ const Button = styled.button`
   padding: 14px 15.5px;
   border-radius: 2px;
   border: none;
-  cursor: pointer;
   font-weight: 500;
   border: 1px solid inherit;
   font-size: 11px;

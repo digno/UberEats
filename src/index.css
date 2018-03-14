@@ -1,5 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   color: #1d1d1d;
+}
+
+button {
+  cursor: pointer;
 }
