@@ -9,7 +9,9 @@ const Picture = styled.img`
   width: 100%;
 `;
 
-const Info = styled.div``;
+const Info = styled.div`
+  padding-top: 14px;
+`;
 
 const Name = styled.div`
   line-height: 24px;
