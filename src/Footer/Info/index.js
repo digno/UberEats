@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { minWidth } from '../../assets';
 
 import Select from './Select';
 import Socials from './Socials';
@@ -12,6 +13,12 @@ const Content = styled.div`
   padding: 30px 0;
   display: flex;
   flex-direction: column;
+
+  ${minWidth.md`
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0;
+  `};
 `;
 
 const ContentCenter = styled.div`

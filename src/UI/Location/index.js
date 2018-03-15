@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { minWidth } from '../../assets';
 
 import location from './location.svg';
 
@@ -15,12 +16,20 @@ const Location = styled.input`
   position: relative;
   width: 100%;
   line-height: 24px;
+
+  ${minWidth.md`
+    margin-left: 10px;
+  `};
 `;
 
 const Info = styled.div`
   font-size: 11px;
   color: #626262;
   margin-bottom: 8px;
+
+  ${minWidth.md`
+    display: none;
+  `};
 `;
 
 const Search = styled.div`
@@ -34,6 +43,10 @@ const Search = styled.div`
     height: 15px;
     top: 13px;
     left: 14px;
+
+    ${minWidth.md`
+      left: 25px;
+    `};
   }
 `;
 

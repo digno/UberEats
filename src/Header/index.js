@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { minWidth } from '../assets';
 
 import logo from './logo.svg';
+import basket from './basket.svg';
+import Asap from '../UI/Asap';
+import Location from '../UI/Location';
 
 const Header = styled.header`
   background: #ffffff;
@@ -17,7 +21,10 @@ const Content = styled.div`
 
 const Logo = styled.a``;
 
-const Buttons = styled.div``;
+const Buttons = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 const Button = styled.button`
   padding: 14px 15.5px;
@@ -40,6 +47,29 @@ const Register = Button.extend`
   background: #262626;
 `;
 
+const Basket = styled.button`
+  display: none;
+  border: none;
+  background-color: inherit;
+
+  ${minWidth.md`
+    display: block;
+    margin-left: 27px;
+  `};
+`;
+
+const Search = styled.div`
+  display: none;
+  ${minWidth.md`
+    display: flex;
+    align-items: center;
+  `};
+`;
+
+const To = styled.span`
+  color: #626262;
+`;
+
 export default () => {
   return (
     <Header>
@@ -48,10 +78,17 @@ export default () => {
           <Logo href="#">
             <img src={logo} alt="logo" />
           </Logo>
-
+          <Search>
+            <Asap />
+            <To>to</To>
+            <Location />
+          </Search>
           <Buttons>
             <SignIn>Sign In</SignIn>
             <Register>Register</Register>
+            <Basket>
+              <img src={basket} alt="basket" />
+            </Basket>
           </Buttons>
         </Content>
       </div>

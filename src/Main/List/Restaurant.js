@@ -1,20 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
+import { minWidth } from '../../assets';
 
-const Restaurant = styled.div`
-  margin-bottom: 12px;
+const Info = styled.div`
+  padding: 10px 0;
+  margin-top: -5px;
+  transition: all 0.3s ease-in-out;
+`;
+
+const Restaurant = styled.a`
+  margin-bottom: 10px;
+  display: block;
+
+  ${minWidth.md`
+    margin-bottom: 36px;
+  `};
+
+  :hover {
+    ${Info} {
+      background-color: rgba(117, 117, 117, 0.04);
+    }
+  }
 `;
 
 const Picture = styled.img`
   width: 100%;
 `;
 
-const Info = styled.div`
-  padding-top: 14px;
-`;
-
 const Name = styled.div`
   line-height: 24px;
+  color: #1d1d1d;
   font-size: 16px;
 `;
 
@@ -26,13 +41,14 @@ const Assortment = styled.div`
 
 const Time = styled.div`
   line-height: 21px;
+  color: #1d1d1d;
 `;
 
 export default props => {
   const { pic, name, assortment, time } = props.restaurant;
 
   return (
-    <Restaurant>
+    <Restaurant href="#">
       <Picture src={pic} />
       <Info>
         <Name>{name}</Name>

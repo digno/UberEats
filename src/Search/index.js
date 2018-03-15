@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { minWidth } from '../assets';
 
 import loupe from './loupe.svg';
 import Asap from '../UI/Asap';
@@ -18,6 +19,10 @@ const Content = styled.div`
 const Buttons = styled.div`
   display: flex;
   margin-top: 24px;
+
+  ${minWidth.md`
+    display: none;
+  `};
 `;
 
 const Loupe = styled.img`
@@ -33,6 +38,10 @@ const Input = styled.input`
     color: #626262;
     opacity: 0.5;
   }
+
+  ${minWidth.md`
+    font-size: 16px;
+  `};
 `;
 
 export default () => {
